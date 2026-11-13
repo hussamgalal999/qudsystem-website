@@ -1,0 +1,32 @@
+{
+  "version": "2026.11.10",
+  "enabled": true,
+  "updatedAt": "2026-11-10T15:25:00Z",
+  "company": "QudSystem",
+  "suiteName": "QudSystem Integrated Software Suite",
+  "officeAiBanner": {
+    "status": "coming_soon",
+    "badge": "قريباً / قادم",
+    "titleAr": "قريباً / قادم: حزمة Qud Office AI المتكاملة",
+    "titleEn": "Coming Soon: Qud Office AI Suite",
+    "descriptionAr": "الحزمة المكتبية والذكية الشاملة من شركة QudSystem — جميع التطبيقات الحالية تمهّد لمنظومة Qud Office AI القادمة.",
+    "url": "https://github.com/Qudsystem"
+  },
+  "paidTierInfo": {
+    "availableSoon": true,
+    "adFree": true,
+    "noteAr": "النسخة المدفوعة بالباقات المتاحة قريباً في كل منتج توفر تجربة كاملة 100% بدون إعلانات مع مزايا وموارد متقدمة.",
+    "noteEn": "Upcoming Paid Plans in every product unlock a 100% ad-free complete experience."
+  },
+  "ads": [
+    {
+      "id": "qud-office-ai-2026",
+      "tag": "إعلان مميز • QudSystem",
+      "title": "قريباً: إطلاق حزمة Qud Office AI — منظومة الإنتاجية والذكاء الاصطناعي الكاملة",
+      "description": "اشترك في التحديثات واحصل على أولوية الوصول إلى الباقات المدفوعة بدون إعلانات عبر كافة منتجات شركة QudSystem.",
+      "ctaText": "استكشف منتجات QudSystem",
+      "ctaUrl": "https://github.com/Qudsystem",
+      "theme": "linear-gradient(135deg, #0f172a 0%, #1d4ed8 60%, #4338ca 100%)"
+    }
+  ]
+}

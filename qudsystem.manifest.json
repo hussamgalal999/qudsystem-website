@@ -1,0 +1,16 @@
+{
+  "name": "QudSystem Official Unified Website",
+  "slug": "qudsystem-website",
+  "vendor": "QudSystem",
+  "suite": "QudSystem Integrated Software Suite",
+  "category": "Enterprise SaaS & Business Systems",
+  "upcomingBundle": "Qud Office AI",
+  "upcomingBadgeAr": "قريباً / قادم: حزمة Qud Office AI",
+  "adSlot": {
+    "centralFeedPath": "/ads/qud-ad-slot.json",
+    "widgetPath": "/ads/qud-ecosystem-banner.js",
+    "adFreeInPaidTier": true,
+    "paidPlansStatus": "coming_soon"
+  },
+  "repository": "https://github.com/Qudsystem/qudsystem-website"
+}

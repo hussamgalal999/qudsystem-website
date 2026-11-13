@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/services.html", "destination": "/services", "permanent": true },
+    { "source": "/service-single.html", "destination": "/services", "permanent": true },
+    { "source": "/pricing-style.html", "destination": "/services", "permanent": true },
+    { "source": "/pricing.html", "destination": "/services", "permanent": true },
+    { "source": "/portfolio-single.html", "destination": "/projects", "permanent": true },
+    { "source": "/projects.html", "destination": "/projects", "permanent": true },
+    { "source": "/contact-us.html", "destination": "/contact", "permanent": true },
+    { "source": "/about-us.html", "destination": "/#about", "permanent": true },
+    { "source": "/integrations.html", "destination": "/#ecosystem", "permanent": true },
+    { "source": "/rtl", "destination": "/?lang=ar", "permanent": true },
+    { "source": "/rtl/index.html", "destination": "/?lang=ar", "permanent": true }
+  ]
+}

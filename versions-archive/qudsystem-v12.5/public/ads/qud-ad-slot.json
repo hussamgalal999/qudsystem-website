@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0",
+  "active": true,
+  "updatedAt": "2026-11-12",
+  "paidTierInfo": {
+    "comingSoon": true,
+    "badge": "100% Ad-Free on Paid Tiers",
+    "badgeAr": "100% بدون إعلانات للباقات المدفوعة",
+    "message": "Paid Plans coming soon will provide a 100% ad-free experience across all QudSystem apps and tools.",
+    "messageAr": "الخطط المدفوعة (قريباً) ستوفر تجربة خالية تماماً 100% من الإعلانات عبر جميع منتجات وحزم كود سيستم.",
+    "proTiers": ["pro", "enterprise", "lifetime", "commercial"],
+    "upgradeNote": "Upgrade anytime once paid tiers launch to remove all ecosystem promo slots."
+  },
+  "upcomingFlagship": {
+    "id": "qud-office-ai",
+    "name": "Qud Office AI Suite",
+    "nameAr": "حزمة Qud Office AI",
+    "status": "Coming Soon",
+    "statusAr": "قريباً / قادم",
+    "headline": "Next-Gen Intelligent Office Suite",
+    "headlineAr": "الحزمة المكتبية الذكية من الجيل القادم",
+    "description": "Unified AI workspace bringing together Docs, Sheets, Presentations, Smart Mail, and Neural Knowledge Base.",
+    "descriptionAr": "بيئة عمل مكتبية متكاملة تجمع المستندات الذكية، الجداول، العروض التقديمية، والبريد الذكي المدعوم بالذكاء الاصطناعي.",
+    "ctaText": "Explore Flagship Suite",
+    "ctaTextAr": "استكشف الحزمة المرتقبة",
+    "url": "/#qud-office-ai",
+    "features": [
+      { "en": "AI Document Forge", "ar": "محرر مستندات مدعوم بالذكاء الاصطناعي" },
+      { "en": "Smart Neural Sheets", "ar": "جداول بيانات تفاعلية مع تحليلات ذكية" },
+      { "en": "Agentic Presentation Builder", "ar": "صانع عروض تقديمية ذاتي" },
+      { "en": "Enterprise Knowledge Vault", "ar": "خزينة معرفة مؤسسية موحدة" }
+    ]
+  },
+  "ads": [
+    {
+      "id": "ad-office-ai",
+      "featured": true,
+      "badge": "Coming Soon",
+      "badgeAr": "قريباً",
+      "title": "Qud Office AI Suite",
+      "titleAr": "قريباً: حزمة Qud Office AI",
+      "tagline": "All-in-one AI Document, Spreadsheet, Presentation & Mail Suite",
+      "taglineAr": "الحزمة المكتبية المتكاملة بالذكاء الاصطناعي — قريباً لجميع الأعمال",
+      "cta": "Join Early Access",
+      "ctaAr": "انضم لقائمة الانتظار المبكر",
+      "href": "/#qud-office-ai",
+      "bgGradient": "linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%)",
+      "category": "Flagship Productivity"
+    },
+    {
+      "id": "ad-dragon-suite",
+      "featured": false,
+      "badge": "Cybersecurity & AI",
+      "badgeAr": "أمن سيبراني وذكاء مؤسسي",
+      "title": "Dragon R1 / B1 & ProtectX",
+      "titleAr": "منظومة دراجون R1 / B1 و ProtectX",
+      "tagline": "Dual-core deep reasoning & automated security audit swarm",
+      "taglineAr": "محرك استنتاج عميق وأسراب تدقيق أمني سيبراني لحماية المنشآت",
+      "cta": "Learn More",
+      "ctaAr": "تعرف على المنظومة",
+      "href": "/services",
+      "bgGradient": "linear-gradient(135deg, #18181b 0%, #27272a 50%, #3f3f46 100%)",
+      "category": "Enterprise Security"
+    },
+    {
+      "id": "ad-qudschool",
+      "featured": false,
+      "badge": "EdTech Platform",
+      "badgeAr": "التعليم الذكي",
+      "title": "QudSchool Digital Campus",
+      "titleAr": "منصة كود سكول التعليمية المتكاملة",
+      "tagline": "Next-gen LMS, virtual classrooms, automated grading & parent portal",
+      "taglineAr": "إدارة مدرسية شاملة وفصول تفاعلية وبوابة لأولياء الأمور",
+      "cta": "Request Demo",
+      "ctaAr": "طلب عرض توضيحي",
+      "href": "/contact",
+      "bgGradient": "linear-gradient(135deg, #0f172a 0%, #0369a1 50%, #0284c7 100%)",
+      "category": "Education"
+    },
+    {
+      "id": "ad-penrate",
+      "featured": false,
+      "badge": "Talent Intelligence",
+      "badgeAr": "تقييم المواهب",
+      "title": "CVPen & PenRate",
+      "titleAr": "منصة CVPen ونظام PenRate",
+      "tagline": "AI-powered resume optimization, ATS scoring & candidate matching",
+      "taglineAr": "فحص السير الذاتية بالذكاء الاصطناعي وتقييم المطابقة الوظيفية",
+      "cta": "Try CVPen",
+      "ctaAr": "جرب CVPen الآن",
+      "href": "/projects",
+      "bgGradient": "linear-gradient(135deg, #064e3b 0%, #047857 50%, #10b981 100%)",
+      "category": "HR Technology"
+    }
+  ]
+}
