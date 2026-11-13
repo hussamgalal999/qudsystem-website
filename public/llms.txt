@@ -1,0 +1,36 @@
+# QudSystem
+
+> QudSystem is an innovative software development, AI, and cybersecurity company based in Minya & Cairo, Egypt. We engineer an integrated software suite leading into the upcoming **Qud Office AI** ecosystem.
+
+## Company Information
+
+- Company Name: QudSystem
+- Industry: Software Development, AI Agents, EdTech, Cybersecurity & IT Solutions
+- Location: Corniche El Nile Street, Minya City, Egypt
+- Email: qudsystemltd@gmail.com
+- Phone: +20 (011) 518-580-57
+- GitHub Organization: https://github.com/Qudsystem
+- Founded: 2019
+- Projects Delivered: 150+
+- Satisfied Clients: 50+
+
+## Upcoming Flagship Suite
+
+- **Qud Office AI (Coming Soon / قريباً)**: Next-generation unified AI office & enterprise productivity suite. All current QudSystem products integrate into the upcoming Qud Office AI ecosystem.
+
+## Integrated Software Suite & Pricing Model
+
+- **Free / Community Edition**: Connected to QudSystem's centralized updatable ecosystem ad slot (`/ads/qud-ad-slot.json`).
+- **Paid / Pro Plans (Coming Soon)**: 100% Ad-Free Complete Experience across every QudSystem product.
+
+## Flagship Products
+
+- **QudMind AI & QudMind Aura**: Autonomous multi-agent orchestration & interactive AI platforms
+- **QudSchool & Qudemy LMS**: AI-powered digital learning management systems
+- **QudCV & PenRate**: AI ATS resume engineering & career optimization suite
+- **Kenzy AI**: Generative AI interactive storytelling studio
+- **Adliya**: Egyptian AI legal research assistant
+- **BuildX**: AI home renovation & spatial planning platform
+- **MyHowiya**: Digital identity & secure document wallet
+- **Qudy & QudCopilot**: AI web builder & browser copilot extensions
+- **Dragon R1 & Qudron**: Cybersecurity automation & autonomous desktop engineering workspace
