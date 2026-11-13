@@ -1,0 +1,49 @@
+# QudSystem — Software & IT Solutions
+
+> QudSystem is an innovative software development, AI engineering, and cybersecurity company founded in 2019 and headquartered in Minya, Egypt with international reach. We build autonomous AI platforms, intelligent business suites, enterprise applications, web applications, cross-platform mobile apps, and cloud infrastructure.
+
+## Company Information
+
+- Company Name: QudSystem Software & IT Solutions (شركة كود سيستم للحلول البرمجية والتقنية)
+- Industry: Software Engineering, AI Platforms, Cybersecurity & IT Solutions
+- Location: Corniche El Nile Street, Minya City, Egypt (also serving Cairo & Global)
+- Email: qudsystemltd@gmail.com / info@qudsystem.com
+- Phone / WhatsApp: +20 (011) 518-580-57
+- Founded: 2019
+- Projects Completed: 150+
+- Satisfied Clients: 50+
+- Experience: 5+ Years of Proven Innovation
+
+## Flagship Ecosystem Products & Divisions
+
+- **Qudron**: Unified Desktop + Cloud Autonomous AI Agent Operating Layer & Swarm Orchestration.
+- **Qud Office AI Suite (Coming Soon / قريباً)**: All-in-one next-generation intelligent office suite unifying AI Docs, Smart Spreadsheets, Agentic Presentations, Mail Intelligence, and Knowledge Vault.
+- **Dragon Security Suite (Dragon R1 / Dragon B1 / ProtectX)**: Dual-core deep reasoning, autonomous offensive/defensive cybersecurity auditing, and real-time business telemetry.
+- **CVPen & PenRate**: AI-driven ATS resume engineering, talent evaluation rubrics, and automated hiring intelligence.
+- **QudSchool & Qudemy**: Comprehensive digital campus, learning management system (LMS), virtual classrooms, automated grading, and parent portal.
+- **Kenzy AI**: Bilingual generative storytelling, multimedia synthesis, and 24/7 conversational customer knowledge assistant.
+- **BuildX**: Modular rapid application scaffolding, production-grade cloud-native SaaS generator.
+- **MyHowia**: Digital identity, portfolio branding, and credential verification.
+- **Adliya**: Legal automation, contract analysis, and judicial workflow management.
+- **QudPro / Hasr**: Inventory management, ERP, CRM, and enterprise cashflow tracking.
+
+## Core Services
+
+1. **Custom Software & Enterprise Solutions**: Tailored ERP, workflow automation, secure architectures, and legacy modernization.
+2. **Modern Web Applications**: Next.js 14/15, React, TypeScript, Tailwind CSS, Progressive Web Apps (PWAs), high-converting landing experiences.
+3. **Mobile App Development**: Cross-platform Flutter and React Native, native iOS and Android apps with offline synchronization.
+4. **Cloud & DevOps**: AWS, GCP, Azure, Docker, Kubernetes, microservices architecture, and CI/CD pipelines.
+5. **AI Integration & Agentic Workflows**: Multi-agent swarms, RAG knowledge bases, localized Arabic/English LLM solutions.
+
+## Core Values
+
+- **Zero-Regression Excellence**: Reliable engineering with rigorous verification gates.
+- **Bilingual By Design**: Native Arabic (RTL) and English support across all products.
+- **Trusted Partnership**: Long-term collaboration based on quality, transparency, and scalable results.
+
+## Contact & Inquiries
+
+- Official Website: https://qudsystem.com
+- Email: qudsystemltd@gmail.com
+- Phone: +20 (011) 518-580-57
+- Head Office: Corniche El Nile Street, Minya, Egypt
