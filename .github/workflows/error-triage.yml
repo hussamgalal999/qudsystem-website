@@ -1,0 +1,40 @@
+name: Runtime Error Triage
+
+# Dedupes runtime-error issues filed by the on-site beacon: when a repeat
+# of an already-open error arrives, it is closed as a duplicate with a
+# pointer to the original, so each unique user-visible error has exactly
+# one tracked issue for the fix loop.
+
+on:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  issues: write
+
+jobs:
+  dedupe:
+    if: contains(github.event.issue.labels.*.name, 'runtime-error')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue
+            const key = issue.title
+            const { data: open } = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open label:runtime-error in:title "${key.replace(/"/g, '')}"`,
+              per_page: 10,
+            })
+            const original = open.items.find((i) => i.number !== issue.number)
+            if (original) {
+              await github.rest.issues.createComment({
+                ...context.repo, issue_number: issue.number,
+                body: `Duplicate of #${original.number} — same runtime error. Closing so the fix loop tracks a single issue.`,
+              })
+              await github.rest.issues.update({ ...context.repo, issue_number: issue.number, state: 'closed', state_reason: 'duplicate' })
+              await github.rest.issues.createComment({
+                ...context.repo, issue_number: original.number,
+                body: `Occurred again (see #${issue.number}). A user hit this error another time.`,
+              })
+            }

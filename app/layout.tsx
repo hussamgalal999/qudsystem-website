@@ -12,6 +12,7 @@ import { Toaster } from "@/components/ui/toaster"
 import PageTransition from "@/components/layout/page-transition"
 import Script from "next/script"
 import JsonLd from "@/components/seo/json-ld"
+import ErrorReporter from "@/components/error-reporter"
 import { siteConfig } from "@/lib/seo"
 import type { Metadata, Viewport } from "next"
 
@@ -93,6 +94,7 @@ export default function RootLayout({
             <EnhancedAssistant />
             <Toaster />
             <JsonLd />
+            <ErrorReporter />
           </LanguageProvider>
         </ThemeProvider>
 

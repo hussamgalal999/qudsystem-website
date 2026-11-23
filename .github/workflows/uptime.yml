@@ -1,0 +1,53 @@
+name: Uptime Monitor
+
+# Every 15 minutes: all live QudSystem properties must answer 200.
+# On failure, opens (or bumps) a GitHub issue so the incident is tracked.
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        url:
+          - https://qud-system.vercel.app/
+          - https://qud.vercel.app/
+          - https://qud-systm.netlify.app/
+          - https://qudsystem.com/
+    steps:
+      - name: Probe ${{ matrix.url }}
+        id: probe
+        run: |
+          code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 "${{ matrix.url }}" || echo 000)
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+      - name: Open incident issue on failure
+        if: steps.probe.outputs.code != '200'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const url = '${{ matrix.url }}'
+            const code = '${{ steps.probe.outputs.code }}'
+            const { data: open } = await github.rest.search.issuesAndPullRequests({
+              q: `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open label:uptime in:title "${url}"`,
+              per_page: 5,
+            })
+            if (open.items.length) {
+              await github.rest.issues.createComment({
+                ...context.repo, issue_number: open.items[0].number,
+                body: `Still failing at ${new Date().toISOString()} — HTTP ${code}.`,
+              })
+            } else {
+              await github.rest.issues.create({
+                ...context.repo,
+                title: `[uptime] ${url} is down (HTTP ${code})`,
+                body: `Automated uptime probe failed.\n\n**URL:** ${url}\n**HTTP:** ${code}\n**Time:** ${new Date().toISOString()}`,
+                labels: ['uptime'],
+              })
+            }
