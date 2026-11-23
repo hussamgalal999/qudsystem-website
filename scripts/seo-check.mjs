@@ -13,7 +13,7 @@ const baseIdx = process.argv.indexOf("--base")
 const BASE = (baseIdx >= 0 ? process.argv[baseIdx + 1] : (process.argv.find((a) => a.startsWith("--base=")) || "").split("=")[1]) || "http://localhost:3000"
 
 const PUBLIC_ROUTES = [
-  "/", "/about", "/blog", "/careers", "/contact", "/features", "/integrations",
+  "/", "/about", "/blog", "/careers", "/contact", "/features", "/faq", "/integrations",
   "/pleasures", "/pricing", "/products", "/projects", "/qud-office-ai",
   "/request-demo", "/services", "/support", "/team", "/testimonials", "/work-process",
   "/blog/ai-transformation-2025", "/blog/cybersecurity-best-practices", "/blog/qud-office-ai-preview",
