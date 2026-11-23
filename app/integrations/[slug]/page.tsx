@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, Layers, CheckCircle2, ArrowRight } from "lucide-react"
@@ -82,6 +83,16 @@ const integrationsMap: Record<
       "تشفير كامل للبيانات أثناء التخزين والنقل (AES-256 / TLS 1.3)",
     ],
   },
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const item = integrationsMap[params.slug]
+  if (!item) return {}
+  return {
+    title: `{item.titleEn} | QudSystem`,
+    description: item.descEn.slice(0, 155),
+    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://qudsystem.com"}/integrations//${params.slug}` },
+  }
 }
 
 export function generateStaticParams() {

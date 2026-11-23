@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, CheckCircle2, Cpu, Zap, Shield, ArrowRight } from "lucide-react"
@@ -114,6 +115,16 @@ const servicesMap: Record<
     deliverablesEn: ["Production bundle & APK/IPA builds", "Design tokens & Figma spec", "PWA manifest & service worker", "Lighthouse audit pass"],
     deliverablesAr: ["حزم الإنتاج الجاهزة للنشر", "مكتبة التصميم والرموز البصرية", "ملفات PWA والـ Service Worker", "تقرير أداء Lighthouse الكامل"],
   },
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const item = servicesMap[params.slug]
+  if (!item) return {}
+  return {
+    title: `{item.titleEn} | QudSystem`,
+    description: item.descEn.slice(0, 155),
+    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://qudsystem.com"}/services//${params.slug}` },
+  }
 }
 
 export function generateStaticParams() {

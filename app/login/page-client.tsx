@@ -1,0 +1,43 @@
+"use client"
+
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { useLanguage } from "@/hooks/use-language"
+
+
+export default function LoginPage() {
+  const { language, dir } = useLanguage()
+  const isAr = language === "ar"
+
+  return (
+    <div dir={dir} className="min-h-screen pt-28 pb-20 flex items-center justify-center bg-slate-50 dark:bg-neutral-950 px-4">
+      <Card className="w-full max-w-md bg-white dark:bg-neutral-900 border-slate-200 dark:border-neutral-800">
+        <CardHeader className="text-center">
+          <CardTitle className="text-2xl font-bold">
+            {isAr ? "بوابة عملاء QudSystem" : "QudSystem Client Portal"}
+          </CardTitle>
+          <CardDescription>
+            {isAr
+              ? "سجّل الدخول لإدارة مشاريعك وتراخيص الباقات المدفوعة قريباً."
+              : "Sign in to manage your projects and upcoming ad-free licenses."}
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <Input type="email" placeholder={isAr ? "البريد الإلكتروني" : "Email address"} />
+          <Input type="password" placeholder={isAr ? "كلمة المرور" : "Password"} />
+          <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+            {isAr ? "تسجيل الدخول" : "Sign In"}
+          </Button>
+          <p className="text-center text-xs text-slate-600 dark:text-neutral-400">
+            {isAr ? "ليس لديك حساب؟" : "Need an account?"}{" "}
+            <Link href="/register" className="text-blue-600 dark:text-blue-400 underline">
+              {isAr ? "إنشاء حساب" : "Register"}
+            </Link>
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  )
+}

@@ -1,4 +1,14 @@
+import { buildMetadata } from "@/lib/seo"
+
+export const metadata = buildMetadata({
+  title: "QudSystem | Integrated Software, AI & Cybersecurity Suite",
+  description:
+    "QudSystem delivers an integrated software, AI, EdTech, and cybersecurity ecosystem — paving the way for the upcoming Qud Office AI suite.",
+  path: "/",
+})
+
 import Hero from "@/components/hero"
+import Divisions from "@/components/divisions"
 import Projects from "@/components/projects"
 import Skills from "@/components/skills"
 import About from "@/components/about"
@@ -12,6 +22,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+      <Divisions />
       <About />
       <QudOfficeAiSection />
       <AiStudioShowcase />

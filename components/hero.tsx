@@ -63,7 +63,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <Button asChild size="lg" className="group bg-blue-600 hover:bg-blue-700 text-white shadow-md">
-              <Link href="/projects">
+              <Link href="/products">
                 <SmartText translationKey="hero.cta">Discover Our Solutions</SmartText>
                 <ArrowRight className="mx-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
@@ -75,7 +75,7 @@ export default function Hero() {
               size="lg"
               className="bg-white/75 dark:bg-neutral-900/75 backdrop-blur-md border-slate-300 dark:border-neutral-700"
             >
-              <Link href="/contact">
+              <Link href="/request-demo">
                 <SmartText translationKey="hero.contact">Get In Touch</SmartText>
               </Link>
             </Button>

@@ -28,11 +28,11 @@ const en = {
 
   // Hero section
   hero: {
-    badge: "Creative Software Solutions",
+    badge: "Pioneering Tech, AI & Cybersecurity — Since 2019",
     title: "QudSystem",
-    subtitle: "Innovative Software Solutions for Modern Businesses",
-    cta: "Discover Our Solutions",
-    contact: "Get In Touch",
+    subtitle: "Engineering autonomous AI agents, cybersecurity platforms, and enterprise software ecosystems — from Egypt to the world.",
+    cta: "Explore the Ecosystem",
+    contact: "Request a Demo",
     stats: {
       projects: "Projects Completed",
       satisfaction: "Client Satisfaction",

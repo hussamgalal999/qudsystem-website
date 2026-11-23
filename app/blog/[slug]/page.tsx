@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
@@ -24,6 +25,16 @@ const articles: Record<string, { title: string; titleAr: string; date: string; c
     content: "We are building Qud Office AI, a comprehensive productivity suite powered by AI agents. From intelligent document editing to automated workflow orchestration, here is what to expect.",
     contentAr: "نحن نبني Qud Office AI، حزمة إنتاجية شاملة مدعومة بوكلاء ذكاء اصطناعي. من تحرير المستندات الذكي إلى تنظيم سير العمل الآلي.",
   },
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const item = articles[params.slug]
+  if (!item) return {}
+  return {
+    title: `{item.title} | QudSystem`,
+    description: item.content.slice(0, 155),
+    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://qudsystem.com"}/blog//${params.slug}` },
+  }
 }
 
 export function generateStaticParams() {

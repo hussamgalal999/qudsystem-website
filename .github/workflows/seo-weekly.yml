@@ -1,0 +1,32 @@
+name: Weekly SEO & Uptime Review
+
+# Scheduled pass over the LIVE site: re-runs the 20-point gate against
+# production, checks external links, and opens an issue when something
+# regresses. Cadence: every Monday 06:00 UTC.
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Base URL to check"
+        required: false
+        default: "https://qudsystem.com"
+
+jobs:
+  live-seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run SEO gate against production
+        run: node scripts/seo-check.mjs --base ${{ github.event.inputs.base_url || 'https://qudsystem.com' }}
+      - name: External link check
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-mail --exclude 'linkedin.com|x.com|twitter.com' "${{ github.event.inputs.base_url || 'https://qudsystem.com' }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
