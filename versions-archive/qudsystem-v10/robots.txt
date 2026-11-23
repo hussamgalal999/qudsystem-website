@@ -13,3 +13,4 @@ Allow: /*
 User-agent: Mediapartners-Google*
 Disallow:
 Allow: /*
+Sitemap: https://qud.vercel.app/sitemap.xml
