@@ -8,6 +8,7 @@ export const metadata = buildMetadata({
 })
 
 import Hero from "@/components/hero"
+import Divisions from "@/components/divisions"
 import Projects from "@/components/projects"
 import Skills from "@/components/skills"
 import About from "@/components/about"
@@ -21,6 +22,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+      <Divisions />
       <About />
       <QudOfficeAiSection />
       <AiStudioShowcase />
