@@ -49,3 +49,15 @@ jobs:
           args: --no-progress --exclude-mail --exclude 'linkedin.com|x.com|twitter.com' "**/*.md" "**/*.html"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  static-archives-seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Gate archived static sites (v10, brand-v)
+        run: |
+          node scripts/seo-static-check.mjs --dir versions-archive/qudsystem-v10 --exclude hero-sections.html,header.html,product-single.html
+          node scripts/seo-static-check.mjs --dir versions-archive/qudsystem-brand-v
