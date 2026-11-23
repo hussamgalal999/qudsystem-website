@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, HelpCircle, Mail, Phone, Clock, MessageSquare, ArrowRight } from "lucide-react"
@@ -82,6 +83,16 @@ const supportArticles: Record<
       "يتم الرد على البلاغات الأمنية الحرجة في غضون 4 ساعات عمل بحد أقصى.",
     ],
   },
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const item = supportArticles[params.slug]
+  if (!item) return {}
+  return {
+    title: `{item.titleEn} | QudSystem`,
+    description: item.contentEn.slice(0, 155),
+    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://qudsystem.com"}/support//${params.slug}` },
+  }
 }
 
 export function generateStaticParams() {

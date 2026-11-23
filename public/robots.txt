@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://qudsystem.com/sitemap.xml
-Host: https://qudsystem.com

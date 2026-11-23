@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { ArrowLeft, MapPin, Briefcase, Clock } from "lucide-react"
@@ -27,6 +28,16 @@ const jobs: Record<string, { title: string; titleAr: string; location: string; t
     description: "Protect QudSystem products and client infrastructure. Conduct penetration testing, vulnerability assessments, and security audits. Help build Dragon Security Suite.",
     descriptionAr: "احمِ منتجات QudSystem والبنية التحتية للعملاء. أجرِ اختبارات اختراق وتقييمات ثغرات وتدقيقات أمنية.",
   },
+}
+
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const item = jobs[params.slug]
+  if (!item) return {}
+  return {
+    title: `{item.title} | QudSystem`,
+    description: item.description.slice(0, 155),
+    alternates: { canonical: `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://qudsystem.com"}/careers//${params.slug}` },
+  }
 }
 
 export function generateStaticParams() {

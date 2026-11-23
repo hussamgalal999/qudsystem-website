@@ -1,0 +1,51 @@
+name: SEO Gate
+
+# Enforces the 20-point QudSystem SEO standard on every change.
+# A pull request that breaks any rule fails here and cannot merge.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  seo-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://qudsystem.com
+
+      - name: Serve production build
+        run: npx next start -p 3100 & npx wait-on http://localhost:3100
+
+      - name: Run 20-point SEO gate
+        run: node scripts/seo-check.mjs --base http://localhost:3100
+
+      - name: Lighthouse (SEO + Web Vitals budget)
+        run: |
+          npx @lhci/cli@0.14.x autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links in source and docs
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --exclude-mail --exclude 'linkedin.com|x.com|twitter.com' "**/*.md" "**/*.html"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

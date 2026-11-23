@@ -11,6 +11,9 @@ import EnhancedAssistant from "@/components/ai/enhanced-assistant"
 import { Toaster } from "@/components/ui/toaster"
 import PageTransition from "@/components/layout/page-transition"
 import Script from "next/script"
+import JsonLd from "@/components/seo/json-ld"
+import { siteConfig } from "@/lib/seo"
+import type { Metadata, Viewport } from "next"
 
 // Load primary Latin tech font
 const inter = Inter({
@@ -33,36 +36,35 @@ const cairo = Cairo({
   weight: ["400", "500", "600", "700", "800", "900"],
 })
 
-export const metadata = {
-  title: "QudSystem | Integrated Software, AI & Cybersecurity Suite",
-  description:
-    "QudSystem delivers an integrated software, AI, EdTech, and cybersecurity ecosystem — paving the way for the upcoming Qud Office AI suite.",
-  keywords: [
-    "QudSystem",
-    "Qud Office AI",
-    "custom software",
-    "AI agents",
-    "cybersecurity",
-    "EdTech",
-    "Egypt",
-  ],
-  metadataBase: new URL("https://qudsystem.com"),
+export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
+  title: { default: siteConfig.defaultTitle, template: siteConfig.titleTemplate },
+  description: siteConfig.defaultDescription,
+  keywords: [...siteConfig.keywords],
   manifest: "/manifest.json",
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   openGraph: {
-    title: "QudSystem | Integrated Software, AI & Cybersecurity Suite",
-    description:
-      "Integrated software suite by QudSystem — Upcoming Qud Office AI & Ad-Free Paid Plans.",
-    url: "https://qudsystem.com",
-    siteName: "QudSystem",
-    locale: "en_US",
+    title: siteConfig.defaultTitle,
+    description: siteConfig.defaultDescription,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    locale: siteConfig.locale,
     type: "website",
+    images: [{ url: siteConfig.ogImage, width: 1200, height: 630, alt: siteConfig.defaultTitle }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "QudSystem | Integrated Software & AI Suite",
-    description:
-      "Integrated software suite by QudSystem — Upcoming Qud Office AI & Ad-Free Paid Plans.",
+    title: siteConfig.defaultTitle,
+    description: siteConfig.defaultDescription,
+    images: [siteConfig.ogImage],
   },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#3b82f6",
 }
 
 export default function RootLayout({
@@ -90,6 +92,7 @@ export default function RootLayout({
             <BackToTop />
             <EnhancedAssistant />
             <Toaster />
+            <JsonLd />
           </LanguageProvider>
         </ThemeProvider>
 
